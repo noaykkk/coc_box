@@ -1,0 +1,34 @@
+<% layout('boilerplate')%>
+<div class="d-md-flex justify-content-md-end">
+    <form action="/myClan?_method=PUT" method="POST">
+        <button class="btn text-light bg-dark">更新部落成员</button>
+    </form>
+</div>
+<table class="table table-hover">
+    <th>
+        <tr id="info-row">
+            <th scope="col">序号</th>
+            <th scope="col">杯段</th>
+            <th scope="col">奖杯</th>
+            <th scope="col">等级</th>
+            <th scope="col">昵称</th>
+            <th scope="col">职位</th>
+            <th scope="col">捐兵</th>
+            <th scope="col">收兵</th>
+        </tr>
+    </th>
+    <tbody>
+        <% for (let member of members){%>
+            <tr>
+                <th scope="row"><%=member.clanRank%></th>
+                <td><img src="<%=member.leagueUrl%>" alt=""></td>
+                <td><%=member.trophies%></td>
+                <td><%=member.expLevel%></td>
+                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                <td><%=member.role%></td>
+                <td><%=member.donations%></td>
+                <td><%=member.donationsReceived%></td>
+            </tr>
+        <% }%>
+    </tbody>
+</table>

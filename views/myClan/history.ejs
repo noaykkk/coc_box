@@ -1,0 +1,17 @@
+<% layout('boilerplate')%>
+<table class="table table-hover">
+    <th>
+        <tr id="info-row">
+            <th scope="col">昵称</th>
+            <th scope="col">最后记录日期</th>
+        </tr>
+    </th>
+    <tbody>
+        <% for (let member of history){%>
+            <tr>
+                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                <td><%=member.notExistDate%></td>
+            </tr>
+        <% }%>
+    </tbody>
+</table>
