@@ -47,7 +47,7 @@ module.exports.getLeague = async(req, res) => {
     var page = new Page({
         teamSize: 30,
         year: 2021,
-        month: 7
+        month: 9
     });
     for(let i=0; i<7; i++){
         for(let j=0; j<4; j++){
@@ -81,19 +81,55 @@ module.exports.showLeague = async(req, res) => {
 }
 
 module.exports.getRecentOneLeague = async(req, res) => {
-    var page = await Page.findOne({}).sort('days.members.townhallLevel').populate({
-        path: 'days',
-        model: 'LeagueRecord',
-        populate: {
-            path: 'members',
-            model: 'League'
-        }
-    });
-    res.render('warLeague/show', {page})
+    var i = await Index.findOne({})
+                        .sort({'page.rank': -1})
+                        .exec(async function(err, ily){
+                            var page = await Page.findById(ily.page[0].record).populate({
+                                path: 'days',
+                                model: 'LeagueRecord',
+                                populate: {
+                                    path: 'members',
+                                    model: 'League'
+                                }
+                            });
+                            res.render('warLeague/show', {page})
+                        });
 }
 
 module.exports.getRecentTwoLeague = async(req, res) => {
+    var i = await Index.find({})
+                        .sort({'page.rank': -1})
+                        .limit(2)
+                        .sort({'page.rank': 1})
+                        .limit(1)
+                        .exec(async function(err, ily){
+                            var page = await Page.findById(ily[0].page[0].record).populate({
+                                path: 'days',
+                                model: 'LeagueRecord',
+                                populate: {
+                                    path: 'members',
+                                    model: 'League'
+                                }
+                            });
+                            res.render('warLeague/show', {page})
+                        });
 }
 
 module.exports.getRecentThreeLeague = async(req, res) => {
+    var i = await Index.find({})
+                        .sort({'page.rank': -1})
+                        .limit(3)
+                        .sort({'page.rank': 1})
+                        .limit(1)
+                        .exec(async function(err, ily){
+                            var page = await Page.findById(ily[0].page[0].record).populate({
+                                path: 'days',
+                                model: 'LeagueRecord',
+                                populate: {
+                                    path: 'members',
+                                    model: 'League'
+                                }
+                            });
+                            res.render('warLeague/show', {page})
+                        });
 }

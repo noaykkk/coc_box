@@ -16,6 +16,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const clanRoutes = require('./routes/clan');
 const warRoutes = require('./routes/war');
 const warLeagueRoutes = require('./routes/warLeague');
+const videoRoutes = require('./routes/video');
 
 const MongoStore = require("connect-mongo");
 
@@ -93,6 +94,7 @@ app.use((req, res, next) => {
 app.use('/myClan', clanRoutes);
 app.use('/warLog', warRoutes);
 app.use('/warLeague', warLeagueRoutes);
+app.use('/video', videoRoutes);
 
 app.get('/', (req, res) => {
   res.redirect('/myClan');

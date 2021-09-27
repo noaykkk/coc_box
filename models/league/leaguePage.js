@@ -5,6 +5,7 @@ const LeaguePageSchema = new Schema({
     year: Number,
     month: Number,
     teamSize: Number,
+    rank: Number,
     days:[
         {
             type: Schema.Types.ObjectId,

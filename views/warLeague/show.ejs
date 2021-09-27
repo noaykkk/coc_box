@@ -41,38 +41,38 @@
         <table class="table table-hover">
             <th>
                 <tr id="info-row">
-                    <th scope="col">大本营等级</th>
-                    <th scope="col">进攻次序</th>
-                    <th scope="col">地图位置</th>
                     <th scope="col">昵称</th>
                     <th scope="col">进攻</th>
                     <th scope="col">得星</th>
                     <th scope="col">时间</th>
                     <th scope="col">摧毁率</th>
+                    <th scope="col">大本营等级</th>
+                    <th scope="col">进攻次序</th>
+                    <th scope="col">地图位置</th>
                 </tr>
             </th>
             <tbody>
                 <% for (let member of page.days[0].members){%>
                     <tr>
                         <% if(member.attacks[0]) {%>
-                            <th scope="row"><%=member.townhallLevel%></th>
-                            <td><%=member.attacks[0].order%></td>
-                            <td><%=member.mapPosition%></td>
-                            <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                            <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                             <td><%=member.attacks[0].defenderTag%></td>
                             <td><%=member.attacks[0].stars%></td>
                             <td><%=member.attacks[0].duration%>秒</td>
                             <td><%=member.attacks[0].destructionPercentage%></td>
+                            <td><%=member.townhallLevel%></td>
+                            <td><%=member.attacks[0].order%></td>
+                            <td><%=member.mapPosition%></td>
                           <% } 
                           else {%> 
-                            <th scope="row"><%=member.townhallLevel%></th>
+                            <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                            <td>*</td>
+                            <td>*</td>
+                            <td>*</td>
+                            <td>*</td>
+                            <td><%=member.townhallLevel%></td>
                             <td>*</td>
                             <td><%=member.mapPosition%></td>
-                            <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
                             <% }
                         %>
                     </tr>
@@ -111,38 +111,38 @@
             <table class="table table-hover">
                 <th>
                     <tr id="info-row">
-                        <th scope="col">大本营等级</th>
-                        <th scope="col">进攻次序</th>
-                        <th scope="col">地图位置</th>
                         <th scope="col">昵称</th>
-                        <th scope="col">进攻</th>
-                        <th scope="col">得星</th>
-                        <th scope="col">时间</th>
-                        <th scope="col">摧毁率</th>
+                    <th scope="col">进攻</th>
+                    <th scope="col">得星</th>
+                    <th scope="col">时间</th>
+                    <th scope="col">摧毁率</th>
+                    <th scope="col">大本营等级</th>
+                    <th scope="col">进攻次序</th>
+                    <th scope="col">地图位置</th>
                     </tr>
                 </th>
                 <tbody>
                     <% for (let member of page.days[1].members){%>
                         <tr>
                             <% if(member.attacks[0]) {%>
-                                <th scope="row"><%=member.townhallLevel%></th>
-                                <td><%=member.attacks[0].order%></td>
-                                <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                                 <td><%=member.attacks[0].defenderTag%></td>
                                 <td><%=member.attacks[0].stars%></td>
                                 <td><%=member.attacks[0].duration%>秒</td>
                                 <td><%=member.attacks[0].destructionPercentage%></td>
-                            <% } 
-                            else {%> 
-                                <th scope="row"><%=member.townhallLevel%></th>
+                                <td><%=member.townhallLevel%></td>
+                                <td><%=member.attacks[0].order%></td>
+                                <td><%=member.mapPosition%></td>
+                              <% } 
+                              else {%> 
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td><%=member.townhallLevel%></td>
                                 <td>*</td>
                                 <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
                                 <% }
                             %>
                         </tr>
@@ -182,38 +182,38 @@
             <table class="table table-hover">
                 <th>
                     <tr id="info-row">
-                        <th scope="col">大本营等级</th>
-                        <th scope="col">进攻次序</th>
-                        <th scope="col">地图位置</th>
                         <th scope="col">昵称</th>
                         <th scope="col">进攻</th>
                         <th scope="col">得星</th>
                         <th scope="col">时间</th>
                         <th scope="col">摧毁率</th>
+                        <th scope="col">大本营等级</th>
+                        <th scope="col">进攻次序</th>
+                        <th scope="col">地图位置</th>
                     </tr>
                 </th>
                 <tbody>
                     <% for (let member of page.days[2].members){%>
                         <tr>
                             <% if(member.attacks[0]) {%>
-                                <th scope="row"><%=member.townhallLevel%></th>
-                                <td><%=member.attacks[0].order%></td>
-                                <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                                 <td><%=member.attacks[0].defenderTag%></td>
                                 <td><%=member.attacks[0].stars%></td>
                                 <td><%=member.attacks[0].duration%>秒</td>
                                 <td><%=member.attacks[0].destructionPercentage%></td>
-                            <% } 
-                            else {%> 
-                                <th scope="row"><%=member.townhallLevel%></th>
+                                <td><%=member.townhallLevel%></td>
+                                <td><%=member.attacks[0].order%></td>
+                                <td><%=member.mapPosition%></td>
+                              <% } 
+                              else {%> 
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td><%=member.townhallLevel%></td>
                                 <td>*</td>
                                 <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
                                 <% }
                             %>
                         </tr>
@@ -253,38 +253,38 @@
             <table class="table table-hover">
                 <th>
                     <tr id="info-row">
-                        <th scope="col">大本营等级</th>
-                        <th scope="col">进攻次序</th>
-                        <th scope="col">地图位置</th>
                         <th scope="col">昵称</th>
                         <th scope="col">进攻</th>
                         <th scope="col">得星</th>
                         <th scope="col">时间</th>
                         <th scope="col">摧毁率</th>
+                        <th scope="col">大本营等级</th>
+                        <th scope="col">进攻次序</th>
+                        <th scope="col">地图位置</th>
                     </tr>
                 </th>
                 <tbody>
                     <% for (let member of page.days[3].members){%>
                         <tr>
                             <% if(member.attacks[0]) {%>
-                                <th scope="row"><%=member.townhallLevel%></th>
-                                <td><%=member.attacks[0].order%></td>
-                                <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                                 <td><%=member.attacks[0].defenderTag%></td>
                                 <td><%=member.attacks[0].stars%></td>
                                 <td><%=member.attacks[0].duration%>秒</td>
                                 <td><%=member.attacks[0].destructionPercentage%></td>
-                            <% } 
-                            else {%> 
-                                <th scope="row"><%=member.townhallLevel%></th>
+                                <td><%=member.townhallLevel%></td>
+                                <td><%=member.attacks[0].order%></td>
+                                <td><%=member.mapPosition%></td>
+                              <% } 
+                              else {%> 
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td><%=member.townhallLevel%></td>
                                 <td>*</td>
                                 <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
                                 <% }
                             %>
                         </tr>
@@ -324,38 +324,38 @@
             <table class="table table-hover">
                 <th>
                     <tr id="info-row">
-                        <th scope="col">大本营等级</th>
-                        <th scope="col">进攻次序</th>
-                        <th scope="col">地图位置</th>
                         <th scope="col">昵称</th>
                         <th scope="col">进攻</th>
                         <th scope="col">得星</th>
                         <th scope="col">时间</th>
                         <th scope="col">摧毁率</th>
+                        <th scope="col">大本营等级</th>
+                        <th scope="col">进攻次序</th>
+                        <th scope="col">地图位置</th>
                     </tr>
                 </th>
                 <tbody>
                     <% for (let member of page.days[4].members){%>
                         <tr>
                             <% if(member.attacks[0]) {%>
-                                <th scope="row"><%=member.townhallLevel%></th>
-                                <td><%=member.attacks[0].order%></td>
-                                <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                                 <td><%=member.attacks[0].defenderTag%></td>
                                 <td><%=member.attacks[0].stars%></td>
                                 <td><%=member.attacks[0].duration%>秒</td>
                                 <td><%=member.attacks[0].destructionPercentage%></td>
-                            <% } 
-                            else {%> 
-                                <th scope="row"><%=member.townhallLevel%></th>
+                                <td><%=member.townhallLevel%></td>
+                                <td><%=member.attacks[0].order%></td>
+                                <td><%=member.mapPosition%></td>
+                              <% } 
+                              else {%> 
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td><%=member.townhallLevel%></td>
                                 <td>*</td>
                                 <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
                                 <% }
                             %>
                         </tr>
@@ -395,38 +395,38 @@
             <table class="table table-hover">
                 <th>
                     <tr id="info-row">
-                        <th scope="col">大本营等级</th>
-                        <th scope="col">进攻次序</th>
-                        <th scope="col">地图位置</th>
                         <th scope="col">昵称</th>
                         <th scope="col">进攻</th>
                         <th scope="col">得星</th>
                         <th scope="col">时间</th>
                         <th scope="col">摧毁率</th>
+                        <th scope="col">大本营等级</th>
+                        <th scope="col">进攻次序</th>
+                        <th scope="col">地图位置</th>
                     </tr>
                 </th>
                 <tbody>
                     <% for (let member of page.days[5].members){%>
                         <tr>
                             <% if(member.attacks[0]) {%>
-                                <th scope="row"><%=member.townhallLevel%></th>
-                                <td><%=member.attacks[0].order%></td>
-                                <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                                 <td><%=member.attacks[0].defenderTag%></td>
                                 <td><%=member.attacks[0].stars%></td>
                                 <td><%=member.attacks[0].duration%>秒</td>
                                 <td><%=member.attacks[0].destructionPercentage%></td>
-                            <% } 
-                            else {%> 
-                                <th scope="row"><%=member.townhallLevel%></th>
+                                <td><%=member.townhallLevel%></td>
+                                <td><%=member.attacks[0].order%></td>
+                                <td><%=member.mapPosition%></td>
+                              <% } 
+                              else {%> 
+                                <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td><%=member.townhallLevel%></td>
                                 <td>*</td>
                                 <td><%=member.mapPosition%></td>
-                                <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
                                 <% }
                             %>
                         </tr>
@@ -466,38 +466,38 @@
         <table class="table table-hover">
             <th>
                 <tr id="info-row">
-                    <th scope="col">大本营等级</th>
-                    <th scope="col">进攻次序</th>
-                    <th scope="col">地图位置</th>
                     <th scope="col">昵称</th>
                     <th scope="col">进攻</th>
                     <th scope="col">得星</th>
                     <th scope="col">时间</th>
                     <th scope="col">摧毁率</th>
+                    <th scope="col">大本营等级</th>
+                    <th scope="col">进攻次序</th>
+                    <th scope="col">地图位置</th>
                 </tr>
             </th>
             <tbody>
                 <% for (let member of page.days[6].members){%>
                     <tr>
                         <% if(member.attacks[0]) {%>
-                            <th scope="row"><%=member.townhallLevel%></th>
-                            <td><%=member.attacks[0].order%></td>
-                            <td><%=member.mapPosition%></td>
-                            <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
+                            <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
                             <td><%=member.attacks[0].defenderTag%></td>
                             <td><%=member.attacks[0].stars%></td>
                             <td><%=member.attacks[0].duration%>秒</td>
                             <td><%=member.attacks[0].destructionPercentage%></td>
+                            <td><%=member.townhallLevel%></td>
+                            <td><%=member.attacks[0].order%></td>
+                            <td><%=member.mapPosition%></td>
                           <% } 
                           else {%> 
-                            <th scope="row"><%=member.townhallLevel%></th>
+                            <th scope="row"><%=member.name%><br><a href=""><%=member.tag%></a></th>
+                            <td>*</td>
+                            <td>*</td>
+                            <td>*</td>
+                            <td>*</td>
+                            <td><%=member.townhallLevel%></td>
                             <td>*</td>
                             <td><%=member.mapPosition%></td>
-                            <td><%=member.name%><br><a href=""><%=member.tag%></a></td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
                             <% }
                         %>
                     </tr>
